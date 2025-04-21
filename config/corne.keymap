@@ -77,23 +77,6 @@
         };
     };
 
-    macros {
-        save: save {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp ESCAPE &kp COLON &kp W &kp ENTER>;
-
-            label = "SAVE";
-        };
-
-        email: email {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp J &kp O &kp S &kp H &kp AT &kp J &kp O &kp S &kp H &kp B &kp L &kp A &kp I &kp S &kp DOT &kp C &kp O &kp M>;
-            label = "EMAIL";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -108,7 +91,7 @@
 &none  &kp Q              &kp W             &kp F                     &kp P                  &kp B        &kp J        &kp L              &kp U             &kp Y              &kp APOS             &none
 &none  &weak LEFT_META A  &weak LEFT_ALT R  &shifthr LEFT_CONTROL S   &shifthr LEFT_SHIFT T  &kp G        &kp M        &shifthr RSHIFT N  &shifthr RCTRL E  &weak RIGHT_ALT I  &kp O                &none
 &none  &kp Z              &kp X             &kp C                     &kp D                  &kp V        &kp K        &kp H              &kp COMMA         &kp DOT            &hm SEMICOLON SLASH  &none
-                                            &hm LC(BACKSPACE) ESCAPE  &lt 1 BACKSPACE        &lt 2 TAB    &lt 2 ENTER  &lt 1 SPACE        &save
+                                            &hm LC(BACKSPACE) ESCAPE  &lt 1 BACKSPACE        &lt 2 TAB    &lt 2 ENTER  &lt 1 SPACE        &kp RIGHT_SHIFT
             >;
 
             label = "home";
